@@ -69,16 +69,14 @@ class MainPage(BasePage):
     def get_order_number(self):
         element = self.wait_for_element_visible(self.order_feed_locators.order_number)
         return element.text
-        import time
-        time.sleep(2)
+    
 
     @allure.step("Закрытие всплывающего окна с номером заказа")
     def close_order_window(self):
         self.click_element_with_wait_clickable(self.order_feed_locators.close_button)
         self.wait_for_element_invisible(self.order_feed_locators.order_number_window)
         self.wait_for_element_clickable(self.locators.order_feed_button)
-        import time
-        time.sleep(2)
+    
 
 
     @allure.step("Переход в Ленту заказов")

@@ -15,8 +15,7 @@ class AccountPage(BasePage):
 
     @allure.step("Клик на кнопку Личный кабинет")
     def click_personal_account(self):
-        import time
-        
+ 
         self.wait_for_element_visible(self.account_locators["personal_account"])
       
         self.click_element_with_wait_clickable(self.account_locators["personal_account"])
